@@ -15,7 +15,7 @@ namespace CityCafe.Models
     // You can add User data for the user by adding more properties to your User class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        //extra fields
+        //extra fields added to model 
         public string Firstname { get; set; }
         public string Lastname { get; set; }
 
@@ -61,6 +61,7 @@ namespace CityCafe.Models
                 // first we create Admin rool   
                 var role = new IdentityRole();
                 role.Name = "Admin";
+                //create the role
                 roleManager.Create(role);
 
                 //Here we create a Admin super user who will maintain the website                  
